@@ -1,0 +1,177 @@
+{
+  "contest_name": "Student Algorithms Sprint",
+  "teams": [
+    {
+      "id": "byte-benders",
+      "name": "Byte Benders"
+    },
+    {
+      "id": "pixel-pioneers",
+      "name": "Pixel Pioneers"
+    },
+    {
+      "id": "loop-legends",
+      "name": "Loop Legends"
+    },
+    {
+      "id": "stack-attack",
+      "name": "Stack Attack"
+    },
+    {
+      "id": "syntax-squad",
+      "name": "Syntax Squad"
+    }
+  ],
+  "problems": [
+    {
+      "id": "A",
+      "name": "Warm-up"
+    },
+    {
+      "id": "B",
+      "name": "Metro Routes"
+    },
+    {
+      "id": "C",
+      "name": "Robot Maze"
+    },
+    {
+      "id": "D",
+      "name": "Library Queue"
+    }
+  ],
+  "submissions": [
+    {
+      "team_id": "byte-benders",
+      "problem_id": "A",
+      "minute": 5,
+      "verdict": "Wrong Answer"
+    },
+    {
+      "team_id": "byte-benders",
+      "problem_id": "A",
+      "minute": 9,
+      "verdict": "Compilation Error"
+    },
+    {
+      "team_id": "byte-benders",
+      "problem_id": "A",
+      "minute": 18,
+      "verdict": "Accepted"
+    },
+    {
+      "team_id": "byte-benders",
+      "problem_id": "B",
+      "minute": 35,
+      "verdict": "Wrong Answer"
+    },
+    {
+      "team_id": "byte-benders",
+      "problem_id": "B",
+      "minute": 52,
+      "verdict": "Accepted"
+    },
+    {
+      "team_id": "byte-benders",
+      "problem_id": "C",
+      "minute": 91,
+      "verdict": "Accepted"
+    },
+    {
+      "team_id": "pixel-pioneers",
+      "problem_id": "A",
+      "minute": 24,
+      "verdict": "Accepted"
+    },
+    {
+      "team_id": "pixel-pioneers",
+      "problem_id": "B",
+      "minute": 44,
+      "verdict": "Accepted"
+    },
+    {
+      "team_id": "pixel-pioneers",
+      "problem_id": "C",
+      "minute": 65,
+      "verdict": "Wrong Answer"
+    },
+    {
+      "team_id": "pixel-pioneers",
+      "problem_id": "C",
+      "minute": 83,
+      "verdict": "Accepted"
+    },
+    {
+      "team_id": "loop-legends",
+      "problem_id": "A",
+      "minute": 14,
+      "verdict": "Accepted"
+    },
+    {
+      "team_id": "loop-legends",
+      "problem_id": "B",
+      "minute": 42,
+      "verdict": "Time Limit Exceeded"
+    },
+    {
+      "team_id": "loop-legends",
+      "problem_id": "B",
+      "minute": 60,
+      "verdict": "Accepted"
+    },
+    {
+      "team_id": "loop-legends",
+      "problem_id": "C",
+      "minute": 87,
+      "verdict": "Wrong Answer"
+    },
+    {
+      "team_id": "loop-legends",
+      "problem_id": "D",
+      "minute": 110,
+      "verdict": "Accepted"
+    },
+    {
+      "team_id": "stack-attack",
+      "problem_id": "A",
+      "minute": 31,
+      "verdict": "Accepted"
+    },
+    {
+      "team_id": "stack-attack",
+      "problem_id": "B",
+      "minute": 60,
+      "verdict": "Wrong Answer"
+    },
+    {
+      "team_id": "stack-attack",
+      "problem_id": "D",
+      "minute": 95,
+      "verdict": "Accepted"
+    },
+    {
+      "team_id": "syntax-squad",
+      "problem_id": "A",
+      "minute": 55,
+      "verdict": "Compilation Error"
+    },
+    {
+      "team_id": "syntax-squad",
+      "problem_id": "A",
+      "minute": 78,
+      "verdict": "Accepted"
+    },
+    {
+      "team_id": "syntax-squad",
+      "problem_id": "D",
+      "minute": 115,
+      "verdict": "Wrong Answer"
+    },
+    {
+      "team_id": "syntax-squad",
+      "problem_id": "D",
+      "minute": 122,
+      "verdict": "Accepted"
+    }
+  ]
+}

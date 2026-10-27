@@ -1,0 +1,6 @@
+__pycache__/
+.pytest_cache/
+.venv/
+*.py[cod]
+contest_state.json
+.DS_Store

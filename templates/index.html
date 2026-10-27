@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ contest.contest_name }} · Contest Board</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">STUDENT WORKSHOP · PRACTICE ONLY</p>
+      <h1>{{ contest.contest_name }}</h1>
+      <p>A tiny programming contest board using sample, pre-judged submissions. No live code judging.</p>
+    </header>
+    <section class="panel" aria-labelledby="submissions-heading">
+      <div class="panel-heading"><h2 id="submissions-heading">Sample submissions</h2><span class="muted">{{ submissions|length }} results</span></div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Time</th><th>Team</th><th>Problem</th><th>Result</th></tr></thead>
+          <tbody>
+          {% for submission in submissions %}
+            <tr><td class="monospace">{{ submission.minute }}m</td><td>{{ submission.team_name }}</td><td>{{ submission.problem_id }}</td><td><span class="verdict {{ 'accepted' if submission.verdict == 'Accepted' else 'rejected' }}">{{ submission.verdict }}</span></td></tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <footer>Workshop demo · All submissions are sample data; no real contest entries are accepted.</footer>
+  </main>
+</body>
+</html>
