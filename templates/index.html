@@ -5,28 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ contest.contest_name }} · Contest Board</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='app.js') }}" defer></script>
 </head>
 <body>
   <main class="shell">
     <header class="hero">
       <p class="eyebrow">STUDENT WORKSHOP · PRACTICE ONLY</p>
       <h1>{{ contest.contest_name }}</h1>
-      <p>A tiny programming contest board using sample, pre-judged submissions. No live code judging.</p>
+      <p>Follow a two-hour practice contest using sample, pre-judged submissions. No live code judging.</p>
     </header>
-    <section class="panel" aria-labelledby="submissions-heading">
-      <div class="panel-heading"><h2 id="submissions-heading">Sample submissions</h2><span class="muted">{{ submissions|length }} results</span></div>
+    <section class="clock-panel" aria-label="Contest clock">
+      <div><p class="clock-label" id="clock-label">CONTEST CLOCK</p><p class="clock" id="clock">02:00:00</p><p class="clock-note" id="clock-note">Ready to start · 2 hours</p></div>
+      <div class="clock-actions"><span id="status" class="status">Not started</span><button id="start-button" type="button">Start contest</button></div>
+    </section>
+    <section class="panel" aria-labelledby="standings-heading">
+      <div class="panel-heading"><div><h2 id="standings-heading">ICPC standings</h2><p class="small-note">Most solved first, then lowest penalty</p></div><span class="live-label">● Auto-updating</span></div>
       <div class="table-scroll">
-        <table>
-          <thead><tr><th>Time</th><th>Team</th><th>Problem</th><th>Result</th></tr></thead>
-          <tbody>
-          {% for submission in submissions %}
-            <tr><td class="monospace">{{ submission.minute }}m</td><td>{{ submission.team_name }}</td><td>{{ submission.problem_id }}</td><td><span class="verdict {{ 'accepted' if submission.verdict == 'Accepted' else 'rejected' }}">{{ submission.verdict }}</span></td></tr>
-          {% endfor %}
-          </tbody>
+        <table aria-label="Contest standings">
+          <thead><tr><th>Rank</th><th>Team</th><th>Solved</th><th>Penalty</th>{% for problem in contest.problems %}<th title="{{ problem.name }}">{{ problem.id }}</th>{% endfor %}</tr></thead>
+          <tbody id="standings-rows"><tr><td colspan="8" class="muted">Loading standings…</td></tr></tbody>
         </table>
       </div>
     </section>
-    <footer>Workshop demo · All submissions are sample data; no real contest entries are accepted.</footer>
+    <section class="panel" aria-labelledby="submissions-heading">
+      <div class="panel-heading"><div><h2 id="submissions-heading">Sample submissions</h2><p class="small-note" id="feed-note">Pre-judged results</p></div><span class="muted" id="submission-count"></span></div>
+      <div class="table-scroll">
+        <table aria-label="Sample submissions">
+          <thead><tr><th>Time</th><th>Team</th><th>Problem</th><th>Result</th></tr></thead>
+          <tbody id="submission-rows"><tr><td colspan="4" class="muted">Loading sample data…</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+    <footer>Workshop demo · Sample data only; no real submissions are accepted. The start time is saved in contest_state.json.</footer>
   </main>
 </body>
 </html>
